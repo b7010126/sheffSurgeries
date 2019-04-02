@@ -7,7 +7,7 @@ String patientResidence
 Date patientDob
 String patientID
 Date dateRegistered
-int patientPhone
+String patientPhone
 
     static constraints = {
 patientName nullable: false, blank: false
