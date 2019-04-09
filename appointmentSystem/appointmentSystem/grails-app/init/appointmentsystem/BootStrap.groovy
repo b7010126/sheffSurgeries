@@ -28,23 +28,9 @@ doctorPhone: '01111777564',
 bio: 'yeet'
 ).save()
 
-def app1 =new Appointment (
 
-appDate: new Date( '03/03/2019'),
-appTime: '2:30pm',
-appDuration: '30',
-roomNumber: '9151'
-).save()
 
-def app2 =new Appointment (
-
-appDate: new Date( '11/04/2019'),
-appTime: '3:00pm',
-appDuration: '30',
-roomNumber: 'A-1111'
-).save()
-
-def Surgery1 =new Surgery (
+def surgery1 =new Surgery (
 
 name: 'City Health Centre',
 address: '21 Marble Street, Sheffield',
@@ -55,7 +41,7 @@ description: 'use placeholder text',
 openingTime: '9'
 ).save()
 
-def Surgery2 =new Surgery (
+def surgery2 =new Surgery (
 
 name: 'Queens Hospital',
 address: '101 Nottingham Road, Nottingham',
@@ -66,7 +52,7 @@ description: 'Health Problems',
 openingTime: '9'
 ).save()
 
-def Patient1 =new Patient (
+def patient1 =new Patient (
 
 patientName: 'Tom Rivers',
 patientAddress: '2 One Way Street, Eckington',
@@ -74,11 +60,10 @@ patientResidence: 'Sheffield, Barnsley, Doncaster',
 patientDob: new Date ('20/09/1998'),
 patientID: 'E25555',
 dateRegistered: new Date ('26/02/2018'),
-patientPhone: '01142224444',
-theappointment: app1
+patientPhone: '01142224444'
 ).save()
 
-def Patient2 =new Patient (
+def patient2 =new Patient (
 
 patientName: 'Leah Hale',
 patientAddress: '9 Bingley Crescent, Mansfield',
@@ -86,11 +71,28 @@ patientResidence: 'Nottingham',
 patientDob: new Date ('21/09/1997'),
 patientID: 'A32222',
 dateRegistered: new Date ('30/01/2017'),
-patientPhone: '07399544312',
-theappointment: app2
+patientPhone: '07399544312'
 ).save()
 
-def Receptionist =new Receptionist (
+def appointment1 =new Appointment (
+
+appDate: new Date( '03/03/2019'),
+appTime: '2:30pm',
+appDuration: 30,
+roomNumber: '9151',
+thepatient: patient1
+).save()
+
+def appointment2 =new Appointment (
+
+appDate: new Date( '11/04/2019'),
+appTime: '3:00pm',
+appDuration: 30,
+roomNumber: 'A-1111',
+thepatient: patient2
+).save()
+
+def receptionist1 =new Receptionist (
 
 recepName: 'Rob Kingston',
 recepEmail: 'r.kingston@email.com',
@@ -99,7 +101,7 @@ recepPassword: 'secret2019',
 recepPhone: '01142224445'
 ).save()
 
-def Receptionist2 =new Receptionist (
+def receptionist2 =new Receptionist (
 
 recepName: 'Ben Kata',
 recepEmail: 'b.kata@email.com',
@@ -108,7 +110,7 @@ recepPassword: 'secret2018',
 recepPhone: '011143332221'
 ).save()
 
-def Prescription1 =new Prescription (
+def prescription1 =new Prescription (
 
 pharmacyName: 'City Centre Pharmacy',
 prescriptionNumber: '56788',
@@ -119,7 +121,7 @@ patientPaying: 'yes',
 thedoctors: doctor1
 ).save()
 
-def Prescription2 =new Prescription (
+def prescription2 =new Prescription (
 
 pharmacyName: 'Queens Hospital',
 prescriptionNumber: '56588',
@@ -130,7 +132,7 @@ patientPaying: 'no',
 thedoctors: doctor2
 ).save()
 
-def Nurse1 =new Nurse (
+def nurse1 =new Nurse (
 
 nurseName: 'Susan Peter',
 qualifications: 'Registered General Nurse',
@@ -139,7 +141,7 @@ nurseOffice: 'B-455',
 nursePhone: '01142224433'
 ).save()
 
-def Nurse2 =new Nurse (
+def nurse2 =new Nurse (
 
 nurseName: 'Alana Curry',
 qualifications: 'Registered General Nurse',
@@ -148,22 +150,29 @@ nurseOffice: 'B-555',
 nursePhone: '01143338899'
 ).save()
 
-doctor1.addToNurse(Nurse1)
-doctor1.addToNurse(Nurse2)
-doctor2.addToNurse(Nurse1)
-doctor2.addToNurse(Nurse2)
-doctor1.addToAppointment(app1)
-doctor1.addToAppointment(app2)
-doctor2.addToAppointment(app1)
-doctor2.addToAppointment(app2)
-doctor1.addToPrescription(Prescription1)
-doctor1.addToPrescription(Prescription2)
-doctor2.addToPrescription(Prescription1)
-doctor2.addToPrescription(Prescription2)
-doctor1.addToPatient(Patient1)
-doctor1.addToPatient(Patient2)
-doctor2.addToPatient(Patient2)
-doctor2.addTo
+surgery1.addToReceptionists(receptionist1)
+surgery2.addToReceptionists(receptionist2)
+patient1.addToPrescriptions(prescription1)
+patient2.addToPrescriptions(prescription2)
+/*doctor1.addToPrescriptions(prescription1)
+doctor2.addToPrescriptions(prescription2)
+doctor1.addToAppointments(appointment1)
+doctor2.addToAppointments(appointment2)
+doctor1.addToPatients(patient1)
+doctor2.addToPatients(patient2)
+doctor1.addToNurses(nurse1)
+doctor2.addToNurses(nurse2)
+doctor1.addToSurgerys(surgery1)
+doctor2.addToSurgerys(surgery2)
+patient1.addToDoctors(doctor1)
+patient2.addToDoctors(doctor2)
+appointment1.addToSurgerys(surgery1)
+appointment2.addToSurgerys(surgery2)
+nurse1.addToSurgerys(surgery1)
+nurse2.addToSurgerys(surgery2)
+nurse1.addToDoctors(doctor1)
+nurse2.addToDoctors(doctor2)*/
+
 
 
 

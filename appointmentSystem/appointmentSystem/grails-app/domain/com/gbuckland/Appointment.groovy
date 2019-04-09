@@ -12,9 +12,8 @@ return roomNumber
 
 Patient thepatient
 
-static hasMany=[surgerys:Surgery]
-static hasMany=[surgerys:Surgery]
-static belongsTo=[Surgery]
+static hasMany=[surgerys:Surgery, doctors:Doctors]
+static belongsTo=[Doctors,Surgery]
 
     static constraints = {
 appDate nullable: false, blank: false

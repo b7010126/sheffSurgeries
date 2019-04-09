@@ -13,7 +13,7 @@ String toString(){
 return name
 }
 
-static hasMany=[receptionists:Receptionist,doctors:Doctors,nurses:Nurses,patients:Patient,appointments:Appointment]
+static hasMany=[receptionists:Receptionist,doctors:Doctors,nurses:Nurse,patients:Patient,appointments:Appointment]
 
     static constraints = {
 name nullable: false, blank: false

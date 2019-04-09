@@ -14,8 +14,8 @@ String toString(){
 return fullName
 }
 
-static hasMany=[appointments:Appointment,prescriptions:Prescription,nurses:Nurse,patients:Patient]
-
+static hasMany=[appointments:Appointment,prescriptions:Prescription,surgerys:Surgery,nurses:Nurse,patients:Patient]
+static belongsTo=[Patient,Surgery]
 
     static constraints = {
 fullName nullable: false, blank: false

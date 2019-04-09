@@ -12,8 +12,8 @@ return nurseName
 }
 
 
-static hasMany=[doctors:Doctors]
-static belongs to =[Doctors,Patient]
+static hasMany=[surgerys:Surgery,doctors:Doctors]
+static belongsTo =[Surgery,Doctors]
 
 
     static constraints = {

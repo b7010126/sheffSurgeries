@@ -8,8 +8,11 @@ String totalCost
 Date dateIssued
 String patientPaying
 
+static hasMany=[surgerys:Surgery,doctors:Doctors]
+static belongsTo=[Surgery,Doctors]
+
 String toString(){
-return pharmacyName
+return prescriptionNumber
 }
 
     static constraints = {

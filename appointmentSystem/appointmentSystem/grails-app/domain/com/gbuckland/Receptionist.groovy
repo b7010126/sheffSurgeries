@@ -7,6 +7,9 @@ String recepUsername
 String recepPassword
 int recepPhone
 
+static hasMany=[surgerys:Surgery]
+static belongsTo=[Surgery]
+
 String toString(){
 return recepName
 }

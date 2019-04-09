@@ -11,12 +11,13 @@ String patientPhone
 
 Appointment theappointment
 
+
 String toString(){
 return patientName
 }
 
 static hasMany=[prescriptions:Prescription,surgerys:Surgery,doctors:Doctors]
-static belongsTo=[Doctors,Surgery
+static belongsTo=[Surgery,Doctors]
 
     static constraints = {
 patientName nullable: false, blank: false
@@ -26,5 +27,6 @@ patientDob nullable: false, blank: false
 patientID nullable: false, blank: false
 dateRegistered nullable: false, blank: false
 patientPhone nullable: false, blank: false
+theappointment nullable: true, blank: true
     }
 }
