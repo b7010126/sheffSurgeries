@@ -10,6 +10,13 @@ String doctorOffice
 String doctorPhone
 String bio
 
+String toString(){
+return fullName
+}
+
+static hasMany=[appointments:Appointment,prescriptions:Prescription,nurses:Nurse,patients:Patient]
+
+
     static constraints = {
 fullName nullable: false, blank: false
 qualification nullable: false, blank: false

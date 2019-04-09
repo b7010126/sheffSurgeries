@@ -7,6 +7,10 @@ String recepUsername
 String recepPassword
 int recepPhone
 
+String toString(){
+return recepName
+}
+
     static constraints = {
 recepName nullable: false, blank: false
 recepEmail nullable: false, blank: false

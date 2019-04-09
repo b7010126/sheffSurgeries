@@ -8,6 +8,10 @@ String totalCost
 Date dateIssued
 String patientPaying
 
+String toString(){
+return pharmacyName
+}
+
     static constraints = {
 pharmacyName nullable: false, blank: false
 prescriptionNumber nullable: false, blank: false
