@@ -16,7 +16,7 @@
 
 <body>
 <div class="row">
-<asset:image src= "surgery-banner.jpg"/>
+<asset:image src= "doctor.banner2.jpg"/>
 
 </div>
 
