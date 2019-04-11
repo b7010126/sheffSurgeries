@@ -15,30 +15,24 @@
 </head>
 
 <body>
+<div class="row">
+<asset:image src= "surgery-banner.jpg"/>
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-static-top" role="navigation">
-    <a class="navbar-brand" href="/#"><asset:image src="grails.svg" alt="Grails Logo"/></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+</div>
 
-    <div class="collapse navbar-collapse" aria-expanded="false" style="height: 0.8px;" id="navbarContent">
-        <ul class="nav navbar-nav ml-auto">
-            <g:pageProperty name="page.nav"/>
-        </ul>
-    </div>
-
-</nav>
 
 <g:layoutBody/>
 
 <div class="footer row" role="contentinfo">
     <div class="col">
         <a href="http://guides.grails.org" target="_blank">
-            <asset:image src="advancedgrails.svg" alt="Grails Guides" class="float-left"/>
+            <asset:image src="advancedgrails.svg" alt="Grails Guides" 
+class="float-left"/>
         </a>
-        <strong class="centered"><a href="http://guides.grails.org" target="_blank">Grails Guides</a></strong>
-        <p>Building your first Grails app? Looking to add security, or create a Single-Page-App? Check out the <a href="http://guides.grails.org" target="_blank">Grails Guides</a> for step-by-step tutorials.</p>
+        <strong class="centered"><a href="http://guides.grails.org" 
+target="_blank">Grails Guides</a></strong>
+        <p>Building your first Grails app? Looking to add security, or create a Single-Page-App? Check out the <a href="http://guides.grails.org" 
+target="_blank">Grails Guides</a> for step-by-step tutorials.</p>
 
     </div>
     <div class="col">

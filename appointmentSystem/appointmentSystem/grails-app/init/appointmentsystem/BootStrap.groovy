@@ -154,7 +154,7 @@ surgery1.addToReceptionists(receptionist1)
 surgery2.addToReceptionists(receptionist2)
 patient1.addToPrescriptions(prescription1)
 patient2.addToPrescriptions(prescription2)
-/*doctor1.addToPrescriptions(prescription1)
+doctor1.addToPrescriptions(prescription1)
 doctor2.addToPrescriptions(prescription2)
 doctor1.addToAppointments(appointment1)
 doctor2.addToAppointments(appointment2)
@@ -171,7 +171,7 @@ appointment2.addToSurgerys(surgery2)
 nurse1.addToSurgerys(surgery1)
 nurse2.addToSurgerys(surgery2)
 nurse1.addToDoctors(doctor1)
-nurse2.addToDoctors(doctor2)*/
+nurse2.addToDoctors(doctor2)
 
 
 
